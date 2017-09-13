@@ -9,9 +9,16 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import com.xuggle.mediatool.IMediaWriter;
+import com.xuggle.mediatool.ToolFactory;
+
+import java.io.File;
+
 public class FXCamTest extends Application {
 	
 	private WebCamService service ;
+
+	private IMediaWriter writer;
 	
 	@Override
 	public void init() {
@@ -19,7 +26,13 @@ public class FXCamTest extends Application {
 		// note this is in init as it **must not** be called on the FX Application Thread:
 
 		Webcam cam = Webcam.getWebcams().get(0);
-		service = new WebCamService(cam);	
+
+		// Write video to file
+		File file = new File("output.ts");
+
+		writer = ToolFactory.makeWriter(file.getName());
+
+		service = new WebCamService(cam, writer);
 	}
 
 	@Override
@@ -39,7 +52,7 @@ public class FXCamTest extends Application {
 			}
 		});
 		
-		WebCamView view = new WebCamView(service);
+		WebCamView view = new WebCamView(service, writer);
 		
 		BorderPane root = new BorderPane(view.getView());
 		BorderPane.setAlignment(startStop, Pos.CENTER);

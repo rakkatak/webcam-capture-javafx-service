@@ -11,7 +11,6 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 
 import com.xuggle.mediatool.IMediaWriter;
-import com.xuggle.mediatool.ToolFactory;
 import com.xuggle.xuggler.ICodec;
 import com.xuggle.xuggler.IPixelFormat;
 import com.xuggle.xuggler.IVideoPicture;
@@ -24,16 +23,23 @@ public class WebCamService extends Service<Image> {
 	private final Webcam cam ;
 	
 	private final WebcamResolution resolution ;
+
+	private IMediaWriter writer ;
 	
-	public WebCamService(Webcam cam, WebcamResolution resolution) {
+	public WebCamService(Webcam cam, WebcamResolution resolution, IMediaWriter writer) {
 		this.cam = cam ;
 		this.resolution = resolution;
+		this.writer = writer;
+		Dimension size = resolution.getSize();
+
+		writer.addVideoStream(0, 0, ICodec.ID.CODEC_ID_H264, size.width, size.height);
+
 		cam.setCustomViewSizes(new Dimension[] {resolution.getSize()});
 		cam.setViewSize(resolution.getSize());
 	}
 	
-	public WebCamService(Webcam cam) {
-		this(cam, WebcamResolution.QVGA);
+	public WebCamService(Webcam cam, IMediaWriter writer) {
+		this(cam, WebcamResolution.QVGA, writer);
 	}
 	
 	@Override
@@ -43,14 +49,6 @@ public class WebCamService extends Service<Image> {
 			protected Image call() throws Exception {
 
 				try {
-
-					// Write video to file
-					File file = new File("output.ts");
-
-					IMediaWriter writer = ToolFactory.makeWriter(file.getName());
-					Dimension size = WebcamResolution.QVGA.getSize();
-
-					writer.addVideoStream(0, 0, ICodec.ID.CODEC_ID_H264, size.width, size.height);
 
 					long start = System.currentTimeMillis();
 
@@ -75,12 +73,12 @@ public class WebCamService extends Service<Image> {
 						i++;
 					}
 
+					System.out.println("Cancelled, closing writer");
 					writer.close();
 					System.out.println("Cancelled, closing cam");
 					cam.close();
 					System.out.println("Cam closed");
 
-					System.out.println("Video recorded in file: " + file.getAbsolutePath());
 					return getValue();
 				} finally {
 					cam.close();

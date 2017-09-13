@@ -2,6 +2,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Region;
+import com.xuggle.mediatool.IMediaWriter;
 
 public class WebCamView {
 
@@ -10,10 +11,13 @@ public class WebCamView {
 	private final Region view ;
 	
 	private final Label statusPlaceholder ;
+
+	private IMediaWriter writer;
 	
 	
-	public WebCamView(WebCamService service) {
+	public WebCamView(WebCamService service, IMediaWriter writer) {
 		this.service = service ;
+		this.writer = writer ;
 		this.imageView = new ImageView();
 		imageView.setPreserveRatio(true);
 		// make the cam behave like a mirror:
@@ -44,6 +48,8 @@ public class WebCamView {
 						statusPlaceholder.setText("Stopped");
 						getChildren().setAll(statusPlaceholder);
 						System.out.println("Processed cancel in view");
+						System.out.println("Cancelled, closing writer");
+						writer.close();
 						break ;
 					case FAILED:
 						imageView.imageProperty().unbind();
