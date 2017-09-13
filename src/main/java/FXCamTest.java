@@ -26,8 +26,8 @@ public class FXCamTest extends Application {
 		// note this is in init as it **must not** be called on the FX Application Thread:
 		Webcam cam = Webcam.getWebcams().get(0);
 
-		// Write video to file, more sophisticated naming required in the future
-		File file = new File("output.ts");
+		// Write video to file
+		File file = new File("output_"+System.currentTimeMillis()+".ts");
 
 		writer = ToolFactory.makeWriter(file.getName());
 
