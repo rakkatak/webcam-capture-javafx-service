@@ -38,6 +38,7 @@ public class WebCamView {
 						break ;
 					case RUNNING:
 						imageView.imageProperty().unbind();
+						// Here the image view binds to the value property set in the service
 						imageView.imageProperty().bind(service.valueProperty());
 						getChildren().setAll(imageView);
 						break ;

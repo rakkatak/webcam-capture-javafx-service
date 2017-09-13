@@ -28,12 +28,14 @@ public class WebCamService extends Service<Image> {
 		this.cam = cam ;
 		this.resolution = resolution;
 		this.writer = writer;
-		Dimension size = resolution.getSize();
 
-		writer.addVideoStream(0, 0, ICodec.ID.CODEC_ID_H264, size.width, size.height);
-
+		// Webcam properties
 		cam.setCustomViewSizes(new Dimension[] {resolution.getSize()});
 		cam.setViewSize(resolution.getSize());
+
+		// Write video stream
+		Dimension size = resolution.getSize();
+		writer.addVideoStream(0, 0, ICodec.ID.CODEC_ID_H264, size.width, size.height);
 	}
 	
 	public WebCamService(Webcam cam, IMediaWriter writer) {
@@ -47,15 +49,17 @@ public class WebCamService extends Service<Image> {
 			protected Image call() throws Exception {
 
 				try {
-
-					long start = System.currentTimeMillis();
-
+					// open the webcam
 					cam.open();
-					int i = 0;
+					// start time is used for the frame timing calculation
+					long start = System.currentTimeMillis();
+					int frameCounter = 0;
+					// Run while the task state is not cancelled
 					while (!isCancelled()) {
-						System.out.println("Capture frame " + i);
+						System.out.println("Capture frame " + frameCounter);
 						if (cam.isImageNew()) {
 							BufferedImage bimg = cam.getImage();
+							// update buffered image value to be streamed
 							updateValue(SwingFXUtils.toFXImage(bimg, null));
 
 							// Write to file
@@ -63,12 +67,12 @@ public class WebCamService extends Service<Image> {
 							IConverter converter = ConverterFactory.createConverter(image, IPixelFormat.Type.YUV420P);
 
 							IVideoPicture frame = converter.toPicture(image, (System.currentTimeMillis() - start) * 1000);
-							frame.setKeyFrame(i == 0);
+							frame.setKeyFrame(frameCounter == 0);
 							frame.setQuality(0);
 
 							writer.encodeVideo(0, frame);
 						}
-						i++;
+						frameCounter++;
 					}
 
 					System.out.println("Cancelled, closing writer");
