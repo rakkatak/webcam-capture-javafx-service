@@ -13,3 +13,9 @@ James found that, in general, the FX application thread is prone to hanging if y
 1. Not a production quiality code.
 2. Java 8 is required to build it.
 
+To run:
+
+
+mvn clean package
+cd target
+java -cp WebCamTest-0.0.1-SNAPSHOT-jar-with-dependencies.jar FXCamTest

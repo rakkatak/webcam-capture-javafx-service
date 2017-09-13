@@ -1,6 +1,5 @@
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
-import java.io.File;
 
 import com.github.sarxos.webcam.Webcam;
 import com.github.sarxos.webcam.WebcamResolution;
@@ -15,7 +14,6 @@ import com.xuggle.xuggler.ICodec;
 import com.xuggle.xuggler.IPixelFormat;
 import com.xuggle.xuggler.IVideoPicture;
 import com.xuggle.xuggler.video.ConverterFactory;
-import com.xuggle.xuggler.video.IConverter;
 import com.xuggle.xuggler.video.IConverter;
 
 public class WebCamService extends Service<Image> {
