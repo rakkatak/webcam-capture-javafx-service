@@ -22,20 +22,11 @@ public class WebCamService extends Service<Image> {
 	
 	private final WebcamResolution resolution ;
 
-	public void setWriter(IMediaWriter writer) {
-		this.writer = writer;
-
-		// Write video stream
-		Dimension size = resolution.getSize();
-		this.writer.addVideoStream(0, 0, ICodec.ID.CODEC_ID_H264, size.width, size.height);
-	}
-
 	private IMediaWriter writer ;
 	
 	public WebCamService(Webcam cam, WebcamResolution resolution) {
 		this.cam = cam ;
 		this.resolution = resolution;
-		this.writer = writer;
 
 		// Webcam properties
 		cam.setCustomViewSizes(new Dimension[] {resolution.getSize()});
@@ -94,6 +85,14 @@ public class WebCamService extends Service<Image> {
 			}
 			
 		};
+	}
+
+	public void setWriter(IMediaWriter writer) {
+		this.writer = writer;
+
+		// Write video stream
+		Dimension size = resolution.getSize();
+		this.writer.addVideoStream(0, 0, ICodec.ID.CODEC_ID_H264, size.width, size.height);
 	}
 	
 

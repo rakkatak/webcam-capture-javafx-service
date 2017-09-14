@@ -9,21 +9,14 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-import com.xuggle.mediatool.IMediaWriter;
-import com.xuggle.mediatool.ToolFactory;
-
-import java.io.File;
-
 public class FXCamTest extends Application {
 	
 	private WebCamService service ;
 	
 	@Override
 	public void init() {
-		
 		// note this is in init as it **must not** be called on the FX Application Thread:
 		Webcam cam = Webcam.getWebcams().get(0);
-
 		service = new WebCamService(cam);
 	}
 

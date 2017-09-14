@@ -31,10 +31,12 @@ public class WebCamView {
 				service.stateProperty().addListener((obs, oldState, newState) -> {
 					switch (newState) {
 					case READY:
+						System.out.println("Ready");
 						statusPlaceholder.setText("Initializing");
 						getChildren().setAll(statusPlaceholder);
 						break ;
 					case SCHEDULED:
+						System.out.println("Scheduled");
 						// Write video to file
 						File file = new File("output_"+System.currentTimeMillis()+".ts");
 						writer = ToolFactory.makeWriter(file.getName());
@@ -43,12 +45,14 @@ public class WebCamView {
 						getChildren().setAll(statusPlaceholder);
 						break ;
 					case RUNNING:
+						System.out.println("Running");
 						imageView.imageProperty().unbind();
 						// Here the image view binds to the value property set in the service
 						imageView.imageProperty().bind(service.valueProperty());
 						getChildren().setAll(imageView);
 						break ;
 					case CANCELLED:
+						System.out.println("Cancelled");
 						imageView.imageProperty().unbind();
 						imageView.setImage(null);
 						statusPlaceholder.setText("Stopped");

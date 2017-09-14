@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a9b2e81-617c-443e-9e5e-eacdff93c949" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FXCamTest.java" afterPath="$PROJECT_DIR$/src/main/java/FXCamTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/WebCamService.java" afterPath="$PROJECT_DIR$/src/main/java/WebCamService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/WebCamView.java" afterPath="$PROJECT_DIR$/src/main/java/WebCamView.java" />
@@ -21,12 +20,12 @@
       <file leaf-file-name="FXCamTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/FXCamTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+            <state relative-caret-position="135">
+              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1412#1413#0" expanded="true" />
-                <element signature="e#1431#1432#0" expanded="true" />
+                <element signature="e#1302#1303#0" expanded="true" />
+                <element signature="e#1321#1322#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -35,18 +34,18 @@
       <file leaf-file-name="WebCamService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/WebCamService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+            <state relative-caret-position="1365">
+              <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1245#1246#0" expanded="true" />
-                <element signature="e#1284#1285#0" expanded="true" />
-                <marker date="1505401871000" expanded="false" signature="1343:1420" ph="() → {" />
-                <marker date="1505401871000" expanded="false" signature="2702:2712" ph="}" />
-                <marker date="1505401871000" expanded="false" signature="2745:2750" ph=" { " />
-                <marker date="1505401871000" expanded="false" signature="2785:2788" ph=" }" />
-                <marker date="1505401871000" expanded="false" signature="2817:2822" ph=" { " />
-                <marker date="1505401871000" expanded="false" signature="2858:2861" ph=" }" />
+                <element signature="e#995#996#0" expanded="true" />
+                <element signature="e#1034#1035#0" expanded="true" />
+                <marker date="1505402967000" expanded="false" signature="1093:1170" ph="() → {" />
+                <marker date="1505402967000" expanded="false" signature="2452:2462" ph="}" />
+                <marker date="1505402967000" expanded="false" signature="2721:2726" ph=" { " />
+                <marker date="1505402967000" expanded="false" signature="2761:2764" ph=" }" />
+                <marker date="1505402967000" expanded="false" signature="2793:2798" ph=" { " />
+                <marker date="1505402967000" expanded="false" signature="2834:2837" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -85,18 +84,18 @@
       <file leaf-file-name="WebCamView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/WebCamView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+            <state relative-caret-position="732">
+              <caret line="54" column="53" lean-forward="false" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3102#3103#0" expanded="true" />
-                <element signature="e#3121#3122#0" expanded="true" />
-                <marker date="1505402752000" expanded="false" signature="2859:2866" ph=" { " />
-                <marker date="1505402752000" expanded="false" signature="2895:2900" ph=" }" />
-                <marker date="1505402752000" expanded="false" signature="2965:2972" ph=" { " />
-                <marker date="1505402752000" expanded="false" signature="3002:3007" ph=" }" />
-                <marker date="1505402752000" expanded="false" signature="3052:3057" ph=" { " />
-                <marker date="1505402752000" expanded="false" signature="3073:3076" ph=" }" />
+                <element signature="e#3252#3253#0" expanded="true" />
+                <element signature="e#3271#3272#0" expanded="true" />
+                <marker date="1505403039000" expanded="false" signature="3009:3016" ph=" { " />
+                <marker date="1505403039000" expanded="false" signature="3045:3050" ph=" }" />
+                <marker date="1505403039000" expanded="false" signature="3115:3122" ph=" { " />
+                <marker date="1505403039000" expanded="false" signature="3152:3157" ph=" }" />
+                <marker date="1505403039000" expanded="false" signature="3202:3207" ph=" { " />
+                <marker date="1505403039000" expanded="false" signature="3223:3226" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -538,48 +537,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FXCamTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        <state relative-caret-position="135">
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1412#1413#0" expanded="true" />
-            <element signature="e#1431#1432#0" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#1321#1322#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/WebCamService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        <state relative-caret-position="1365">
+          <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1245#1246#0" expanded="true" />
-            <element signature="e#1284#1285#0" expanded="true" />
-            <marker date="1505401871000" expanded="false" signature="1343:1420" ph="() → {" />
-            <marker date="1505401871000" expanded="false" signature="2702:2712" ph="}" />
-            <marker date="1505401871000" expanded="false" signature="2745:2750" ph=" { " />
-            <marker date="1505401871000" expanded="false" signature="2785:2788" ph=" }" />
-            <marker date="1505401871000" expanded="false" signature="2817:2822" ph=" { " />
-            <marker date="1505401871000" expanded="false" signature="2858:2861" ph=" }" />
+            <element signature="e#995#996#0" expanded="true" />
+            <element signature="e#1034#1035#0" expanded="true" />
+            <marker date="1505402967000" expanded="false" signature="1093:1170" ph="() → {" />
+            <marker date="1505402967000" expanded="false" signature="2452:2462" ph="}" />
+            <marker date="1505402967000" expanded="false" signature="2721:2726" ph=" { " />
+            <marker date="1505402967000" expanded="false" signature="2761:2764" ph=" }" />
+            <marker date="1505402967000" expanded="false" signature="2793:2798" ph=" { " />
+            <marker date="1505402967000" expanded="false" signature="2834:2837" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/WebCamView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+        <state relative-caret-position="732">
+          <caret line="54" column="53" lean-forward="false" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3102#3103#0" expanded="true" />
-            <element signature="e#3121#3122#0" expanded="true" />
-            <marker date="1505402752000" expanded="false" signature="2859:2866" ph=" { " />
-            <marker date="1505402752000" expanded="false" signature="2895:2900" ph=" }" />
-            <marker date="1505402752000" expanded="false" signature="2965:2972" ph=" { " />
-            <marker date="1505402752000" expanded="false" signature="3002:3007" ph=" }" />
-            <marker date="1505402752000" expanded="false" signature="3052:3057" ph=" { " />
-            <marker date="1505402752000" expanded="false" signature="3073:3076" ph=" }" />
+            <element signature="e#3252#3253#0" expanded="true" />
+            <element signature="e#3271#3272#0" expanded="true" />
+            <marker date="1505403039000" expanded="false" signature="3009:3016" ph=" { " />
+            <marker date="1505403039000" expanded="false" signature="3045:3050" ph=" }" />
+            <marker date="1505403039000" expanded="false" signature="3115:3122" ph=" { " />
+            <marker date="1505403039000" expanded="false" signature="3152:3157" ph=" }" />
+            <marker date="1505403039000" expanded="false" signature="3202:3207" ph=" { " />
+            <marker date="1505403039000" expanded="false" signature="3223:3226" ph=" }" />
           </folding>
         </state>
       </provider>
