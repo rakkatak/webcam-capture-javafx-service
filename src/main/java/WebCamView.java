@@ -1,8 +1,11 @@
+import com.xuggle.mediatool.ToolFactory;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Region;
 import com.xuggle.mediatool.IMediaWriter;
+
+import java.io.File;
 
 public class WebCamView {
 
@@ -12,12 +15,11 @@ public class WebCamView {
 	
 	private final Label statusPlaceholder ;
 
-	private IMediaWriter writer;
+	private IMediaWriter writer ;
 	
-	
-	public WebCamView(WebCamService service, IMediaWriter writer) {
+	public WebCamView(WebCamService service) {
 		this.service = service ;
-		this.writer = writer ;
+
 		this.imageView = new ImageView();
 		imageView.setPreserveRatio(true);
 		// make the cam behave like a mirror:
@@ -33,6 +35,10 @@ public class WebCamView {
 						getChildren().setAll(statusPlaceholder);
 						break ;
 					case SCHEDULED:
+						// Write video to file
+						File file = new File("output_"+System.currentTimeMillis()+".ts");
+						writer = ToolFactory.makeWriter(file.getName());
+						service.setWriter(writer);
 						statusPlaceholder.setText("Waiting");
 						getChildren().setAll(statusPlaceholder);
 						break ;
@@ -43,7 +49,6 @@ public class WebCamView {
 						getChildren().setAll(imageView);
 						break ;
 					case CANCELLED:
-						System.out.println("Cancelled");
 						imageView.imageProperty().unbind();
 						imageView.setImage(null);
 						statusPlaceholder.setText("Stopped");

@@ -22,9 +22,17 @@ public class WebCamService extends Service<Image> {
 	
 	private final WebcamResolution resolution ;
 
+	public void setWriter(IMediaWriter writer) {
+		this.writer = writer;
+
+		// Write video stream
+		Dimension size = resolution.getSize();
+		this.writer.addVideoStream(0, 0, ICodec.ID.CODEC_ID_H264, size.width, size.height);
+	}
+
 	private IMediaWriter writer ;
 	
-	public WebCamService(Webcam cam, WebcamResolution resolution, IMediaWriter writer) {
+	public WebCamService(Webcam cam, WebcamResolution resolution) {
 		this.cam = cam ;
 		this.resolution = resolution;
 		this.writer = writer;
@@ -32,14 +40,10 @@ public class WebCamService extends Service<Image> {
 		// Webcam properties
 		cam.setCustomViewSizes(new Dimension[] {resolution.getSize()});
 		cam.setViewSize(resolution.getSize());
-
-		// Write video stream
-		Dimension size = resolution.getSize();
-		writer.addVideoStream(0, 0, ICodec.ID.CODEC_ID_H264, size.width, size.height);
 	}
 	
-	public WebCamService(Webcam cam, IMediaWriter writer) {
-		this(cam, WebcamResolution.QVGA, writer);
+	public WebCamService(Webcam cam) {
+		this(cam, WebcamResolution.QVGA);
 	}
 	
 	@Override
@@ -63,14 +67,16 @@ public class WebCamService extends Service<Image> {
 							updateValue(SwingFXUtils.toFXImage(bimg, null));
 
 							// Write to file
-							BufferedImage image = ConverterFactory.convertToType(cam.getImage(), BufferedImage.TYPE_3BYTE_BGR);
-							IConverter converter = ConverterFactory.createConverter(image, IPixelFormat.Type.YUV420P);
+							if (writer!=null) {
+								BufferedImage image = ConverterFactory.convertToType(cam.getImage(), BufferedImage.TYPE_3BYTE_BGR);
+								IConverter converter = ConverterFactory.createConverter(image, IPixelFormat.Type.YUV420P);
 
-							IVideoPicture frame = converter.toPicture(image, (System.currentTimeMillis() - start) * 1000);
-							frame.setKeyFrame(frameCounter == 0);
-							frame.setQuality(0);
+								IVideoPicture frame = converter.toPicture(image, (System.currentTimeMillis() - start) * 1000);
+								frame.setKeyFrame(frameCounter == 0);
+								frame.setQuality(0);
 
-							writer.encodeVideo(0, frame);
+								writer.encodeVideo(0, frame);
+							}
 						}
 						frameCounter++;
 					}

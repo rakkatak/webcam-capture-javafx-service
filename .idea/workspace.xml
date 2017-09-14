@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a9b2e81-617c-443e-9e5e-eacdff93c949" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FXCamTest.java" afterPath="$PROJECT_DIR$/src/main/java/FXCamTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/WebCamService.java" afterPath="$PROJECT_DIR$/src/main/java/WebCamService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/WebCamView.java" afterPath="$PROJECT_DIR$/src/main/java/WebCamView.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,15 +18,15 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FXCamTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FXCamTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/FXCamTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+            <state relative-caret-position="200">
+              <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1605#1606#0" expanded="true" />
-                <element signature="e#1624#1625#0" expanded="true" />
+                <element signature="e#1412#1413#0" expanded="true" />
+                <element signature="e#1431#1432#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -32,12 +35,18 @@
       <file leaf-file-name="WebCamService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/WebCamService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="54" column="59" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="59" />
+            <state relative-caret-position="152">
+              <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1208#1209#0" expanded="true" />
-                <element signature="e#1255#1256#0" expanded="true" />
+                <element signature="e#1245#1246#0" expanded="true" />
+                <element signature="e#1284#1285#0" expanded="true" />
+                <marker date="1505401871000" expanded="false" signature="1343:1420" ph="() → {" />
+                <marker date="1505401871000" expanded="false" signature="2702:2712" ph="}" />
+                <marker date="1505401871000" expanded="false" signature="2745:2750" ph=" { " />
+                <marker date="1505401871000" expanded="false" signature="2785:2788" ph=" }" />
+                <marker date="1505401871000" expanded="false" signature="2817:2822" ph=" { " />
+                <marker date="1505401871000" expanded="false" signature="2858:2861" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -66,22 +75,28 @@
       <file leaf-file-name="Service.java" pinned="false" current-in-tab="false">
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/javafx-src.zip!/javafx/concurrent/Service.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8948">
+            <state relative-caret-position="8608">
               <caret line="657" column="9" lean-forward="true" selection-start-line="657" selection-start-column="9" selection-end-line="657" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebCamView.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WebCamView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/WebCamView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="61" lean-forward="true" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
+            <state relative-caret-position="455">
+              <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2935#2936#0" expanded="true" />
-                <element signature="e#2954#2955#0" expanded="true" />
+                <element signature="e#3102#3103#0" expanded="true" />
+                <element signature="e#3121#3122#0" expanded="true" />
+                <marker date="1505402752000" expanded="false" signature="2859:2866" ph=" { " />
+                <marker date="1505402752000" expanded="false" signature="2895:2900" ph=" }" />
+                <marker date="1505402752000" expanded="false" signature="2965:2972" ph=" { " />
+                <marker date="1505402752000" expanded="false" signature="3002:3007" ph=" }" />
+                <marker date="1505402752000" expanded="false" signature="3052:3057" ph=" { " />
+                <marker date="1505402752000" expanded="false" signature="3073:3076" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -90,8 +105,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="540">
+              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,8 +117,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>WebCamView</find>
-      <find>createTask</find>
       <find>service</find>
+      <find>createTask</find>
       <find>task</find>
     </findStrings>
   </component>
@@ -119,9 +134,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/FXCamTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/WebCamService.java" />
         <option value="$PROJECT_DIR$/src/main/java/WebCamView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/FXCamTest.java" />
       </list>
     </option>
   </component>
@@ -133,9 +148,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="2494" />
     <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="962" />
+    <option name="width" value="2057" />
+    <option name="height" value="1165" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -409,7 +425,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="962" extended-state="6" />
+    <frame x="2494" y="23" width="2057" height="1165" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -427,7 +443,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20297767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -450,14 +466,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/xuggle/xuggle-xuggler/5.4/xuggle-xuggler-5.4.jar!/com/xuggle/xuggler/video/IConverter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -471,8 +479,8 @@
         <state relative-caret-position="280">
           <caret line="155" column="19" lean-forward="false" selection-start-line="155" selection-start-column="19" selection-end-line="155" selection-end-column="19" />
           <folding>
-            <element signature="e#5279#5280#0" expanded="true" />
-            <element signature="e#5320#5321#0" expanded="true" />
+            <element signature="e#5279#5280#0" expanded="false" />
+            <element signature="e#5320#5321#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -488,10 +496,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/javafx-src.zip!/javafx/concurrent/Service.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Parent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8948">
-          <caret line="657" column="9" lean-forward="true" selection-start-line="657" selection-start-column="9" selection-end-line="657" selection-end-column="9" />
+        <state relative-caret-position="280">
+          <caret line="876" column="16" lean-forward="false" selection-start-line="876" selection-start-column="16" selection-end-line="876" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -504,6 +512,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/javafx-src.zip!/javafx/concurrent/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8608">
+          <caret line="657" column="9" lean-forward="true" selection-start-line="657" selection-start-column="9" selection-end-line="657" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/javafx-src.zip!/javafx/concurrent/Task.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4498">
@@ -512,46 +528,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Parent.java">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="876" column="16" lean-forward="false" selection-start-line="876" selection-start-column="16" selection-end-line="876" selection-end-column="16" />
+        <state relative-caret-position="540">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/WebCamView.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/FXCamTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="61" lean-forward="true" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
+        <state relative-caret-position="200">
+          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2935#2936#0" expanded="true" />
-            <element signature="e#2954#2955#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1431#1432#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/WebCamService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="54" column="59" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="59" />
+        <state relative-caret-position="152">
+          <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1208#1209#0" expanded="true" />
-            <element signature="e#1255#1256#0" expanded="true" />
+            <element signature="e#1245#1246#0" expanded="true" />
+            <element signature="e#1284#1285#0" expanded="true" />
+            <marker date="1505401871000" expanded="false" signature="1343:1420" ph="() → {" />
+            <marker date="1505401871000" expanded="false" signature="2702:2712" ph="}" />
+            <marker date="1505401871000" expanded="false" signature="2745:2750" ph=" { " />
+            <marker date="1505401871000" expanded="false" signature="2785:2788" ph=" }" />
+            <marker date="1505401871000" expanded="false" signature="2817:2822" ph=" { " />
+            <marker date="1505401871000" expanded="false" signature="2858:2861" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FXCamTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/WebCamView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+        <state relative-caret-position="455">
+          <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1605#1606#0" expanded="true" />
-            <element signature="e#1624#1625#0" expanded="true" />
+            <element signature="e#3102#3103#0" expanded="true" />
+            <element signature="e#3121#3122#0" expanded="true" />
+            <marker date="1505402752000" expanded="false" signature="2859:2866" ph=" { " />
+            <marker date="1505402752000" expanded="false" signature="2895:2900" ph=" }" />
+            <marker date="1505402752000" expanded="false" signature="2965:2972" ph=" { " />
+            <marker date="1505402752000" expanded="false" signature="3002:3007" ph=" }" />
+            <marker date="1505402752000" expanded="false" signature="3052:3057" ph=" { " />
+            <marker date="1505402752000" expanded="false" signature="3073:3076" ph=" }" />
           </folding>
         </state>
       </provider>

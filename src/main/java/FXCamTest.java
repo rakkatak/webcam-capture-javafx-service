@@ -17,8 +17,6 @@ import java.io.File;
 public class FXCamTest extends Application {
 	
 	private WebCamService service ;
-
-	private IMediaWriter writer;
 	
 	@Override
 	public void init() {
@@ -26,12 +24,7 @@ public class FXCamTest extends Application {
 		// note this is in init as it **must not** be called on the FX Application Thread:
 		Webcam cam = Webcam.getWebcams().get(0);
 
-		// Write video to file
-		File file = new File("output_"+System.currentTimeMillis()+".ts");
-
-		writer = ToolFactory.makeWriter(file.getName());
-
-		service = new WebCamService(cam, writer);
+		service = new WebCamService(cam);
 	}
 
 	@Override
@@ -51,7 +44,7 @@ public class FXCamTest extends Application {
 			}
 		});
 		
-		WebCamView view = new WebCamView(service, writer);
+		WebCamView view = new WebCamView(service);
 		
 		BorderPane root = new BorderPane(view.getView());
 		BorderPane.setAlignment(startStop, Pos.CENTER);
