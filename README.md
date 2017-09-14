@@ -14,22 +14,22 @@
 
 ## Personal Research
 # JavaFX
-JavaFX is a set of graphics and media packages that enables developers to develope applications that operate consistently across diverse platforms. There are JavaFX APIs for media streaming, web rendering, and user interface styling.
+JavaFX is a set of graphics and media packages that includes media streaming APIs, which operate consistently across diverse platforms.
 
 # LamdaExpressions
 
 ### How To Use
 
-1. Simply run [FXCamTest](https://github.com/sarxos/webcam-capture/blob/master/webcam-capture-examples/webcam-capture-javafx-service/src/main/java/FXCamTest.java).
+Simply run [FXCamTest](https://github.com/sarxos/webcam-capture/blob/master/webcam-capture-examples/webcam-capture-javafx-service/src/main/java/FXCamTest.java).
 i.e.
-mvn clean package
-cd target
-java -cp WebCamTest-0.0.1-SNAPSHOT-jar-with-dependencies.jar FXCamTest
+- mvn clean package
+- cd target
+- java -cp WebCamTest-0.0.1-SNAPSHOT-jar-with-dependencies.jar FXCamTest
 
-#### Notes
+#### Future enhancements
 
-1. Not a production quiality code.
-2. Java 8 is required to build it.
+1. Include audio
+2. Integration into School Messenger
 
 
 
