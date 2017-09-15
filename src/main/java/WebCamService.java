@@ -58,7 +58,7 @@ public class WebCamService extends Service<Image> {
 							updateValue(SwingFXUtils.toFXImage(bimg, null));
 
 							// Write to file
-							if (writer!=null) {
+							if (writer != null) {
 								BufferedImage image = ConverterFactory.convertToType(cam.getImage(), BufferedImage.TYPE_3BYTE_BGR);
 								IConverter converter = ConverterFactory.createConverter(image, IPixelFormat.Type.YUV420P);
 
