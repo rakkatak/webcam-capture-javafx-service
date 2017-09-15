@@ -5,7 +5,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Region;
 import com.xuggle.mediatool.IMediaWriter;
 
+import javax.sound.sampled.LineUnavailableException;
 import java.io.File;
+import java.io.IOException;
 
 public class WebCamView {
 
@@ -16,6 +18,10 @@ public class WebCamView {
 	private final Label statusPlaceholder ;
 
 	private IMediaWriter writer ;
+
+	private SoundRecordingUtil recorder;
+
+	private File wavFile ;
 	
 	public WebCamView(WebCamService service) {
 		this.service = service ;
@@ -43,6 +49,27 @@ public class WebCamView {
 						service.setWriter(writer);
 						statusPlaceholder.setText("Waiting");
 						getChildren().setAll(statusPlaceholder);
+
+						// Audio Recording
+						recorder = new SoundRecordingUtil();
+						wavFile = new File("output_"+System.currentTimeMillis()+".wav");
+
+						// create a separate thread for recording
+						Thread recordThread = new Thread(new Runnable() {
+							@Override
+							public void run() {
+								try {
+									System.out.println("Start recording...");
+									recorder.start();
+								} catch (LineUnavailableException ex) {
+									ex.printStackTrace();
+									System.exit(-1);
+								}
+							}
+						});
+
+						recordThread.start();
+
 						break ;
 					case RUNNING:
 						System.out.println("Running");
@@ -60,6 +87,17 @@ public class WebCamView {
 						System.out.println("Processed cancel in view");
 						System.out.println("Cancelled, closing writer");
 						writer.close();
+
+						// Stop recording
+						try {
+							recorder.stop();
+							recorder.save(wavFile);
+							System.out.println("Stopping recording");
+						} catch (IOException ex) {
+							ex.printStackTrace();
+						}
+
+						System.out.println("Done recording");
 						break ;
 					case FAILED:
 						imageView.imageProperty().unbind();
