@@ -4,8 +4,8 @@
 
 ## [Webcam Capture](http://webcam-capture.sarxos.pl/)
 - API allows you to use your build-in or external webcam directly from Java
-- Supports multiple frameworks.
-- The WebcamDriver interface which has been already implemented in several capturing drivers build on top of well-known frameworks used to work with multimedia and cameras.
+- Supports multiple video capturing frameworks
+- The WebcamDriver interface which has been already implemented in several capturing drivers build on top of well-known frameworks used to work with multimedia and cameras
 - The default driver implementation wraps the [OpenImaj](http://openimaj.org/) library that has cool features like face recognition
 
 ## Relevance
