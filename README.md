@@ -1,8 +1,8 @@
 # Webcam Video Recording Example
 
-- Leverages JavaFX and an open source project called [Webcam Capture](http://webcam-capture.sarxos.pl/)
+- Accesses default webcam and produces a video recording
 
-## Webcam Capture
+## [Webcam Capture](http://webcam-capture.sarxos.pl/)
 - API allows you to use your build-in or external webcam directly from Java
 - Supports multiple frameworks.
 - The WebcamDriver interface which has been already implemented in several capturing drivers build on top of well-known frameworks used to work with multimedia and cameras.
