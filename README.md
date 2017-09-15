@@ -1,4 +1,4 @@
-# Webcam Capture Live Streaming Example
+# Webcam Video Recording Example
 
 - Leverages JavaFX and an open source project called [Webcam Capture](http://webcam-capture.sarxos.pl/)
 
