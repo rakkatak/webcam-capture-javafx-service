@@ -27,7 +27,7 @@ JavaFX is a set of graphics and media packages that includes media streaming API
     - The arrow token
     - A body, which consists of a single expression or a statement block
 i.e. ```p -> p.getGender() == Person.Sex.MALE
-            && p.getAge() >= 18
+            && p.getAge() >= 18  
             && p.getAge() <= 25```
 
 # javax.sound
