@@ -16,7 +16,19 @@
 # JavaFX
 JavaFX is a set of graphics and media packages that includes media streaming APIs, which operate consistently across diverse platforms.
 
-# LamdaExpressions
+# Lamda Expressions:
+- look a lot like a method declaration; you can consider lambda expressions as anonymous methods (methods without a name).
+- do not inherit any names from a supertype or introduce a new level of scoping
+- syntax:
+    - A comma-separated list of formal parameters enclosed in parentheses
+    - The arrow token
+    - A body, which consists of a single expression or a statement block
+i.e. ```p -> p.getGender() == Person.Sex.MALE
+            && p.getAge() >= 18
+            && p.getAge() <= 25```
+
+# javax.sound
+Provides interfaces and classes for capture, processing, and playback of sampled audio data.
 
 ### How To Use
 
@@ -28,7 +40,7 @@ i.e.
 
 #### Future enhancements
 
-1. Include audio
+1. Line up audio with video
 2. Integration into School Messenger
 
 

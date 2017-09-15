@@ -50,6 +50,10 @@ public class WebCamView {
 						statusPlaceholder.setText("Waiting");
 						getChildren().setAll(statusPlaceholder);
 
+						break ;
+					case RUNNING:
+						System.out.println("Running");
+
 						// Audio Recording
 						recorder = new SoundRecordingUtil();
 						wavFile = new File("output_"+System.currentTimeMillis()+".wav");
@@ -70,9 +74,6 @@ public class WebCamView {
 
 						recordThread.start();
 
-						break ;
-					case RUNNING:
-						System.out.println("Running");
 						imageView.imageProperty().unbind();
 						// Here the image view binds to the value property set in the service
 						imageView.imageProperty().bind(service.valueProperty());
