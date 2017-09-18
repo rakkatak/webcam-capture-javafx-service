@@ -13,7 +13,6 @@
 - The web UI currently does not allow you to create a movie and upload without leaving the interface
 ### Safe Arrival
 - Showing a the classroom
-- Potentially providing a number of faces recognized in the image
 
 ## Personal Research
 # JavaFX
@@ -44,7 +43,7 @@ i.e.
 #### Future enhancements
 
 1. Line up audio with video
-2. Integration into School Messenger
+
 
 
 
