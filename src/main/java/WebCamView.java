@@ -49,30 +49,11 @@ public class WebCamView {
 						service.setWriter(writer);
 						statusPlaceholder.setText("Waiting");
 						getChildren().setAll(statusPlaceholder);
-
 						break ;
 					case RUNNING:
 						System.out.println("Running");
-
-						// Audio Recording
-						recorder = new SoundRecordingUtil();
-						wavFile = new File("output_"+System.currentTimeMillis()+".wav");
-
 						// create a separate thread for recording
-						Thread recordThread = new Thread(new Runnable() {
-							@Override
-							public void run() {
-								try {
-									System.out.println("Start recording...");
-									recorder.start();
-								} catch (LineUnavailableException ex) {
-									ex.printStackTrace();
-									System.exit(-1);
-								}
-							}
-						});
-
-						recordThread.start();
+						audioRecordingStart();
 
 						imageView.imageProperty().unbind();
 						// Here the image view binds to the value property set in the service
@@ -90,13 +71,7 @@ public class WebCamView {
 						writer.close();
 
 						// Stop recording
-						try {
-							recorder.stop();
-							recorder.save(wavFile);
-							System.out.println("Stopping recording");
-						} catch (IOException ex) {
-							ex.printStackTrace();
-						}
+						audioRecordingStop();
 
 						System.out.println("Done recording");
 						break ;
@@ -142,7 +117,38 @@ public class WebCamView {
 			}
 		};
 	}
-	
+
+	private void audioRecordingStart() {
+		// Audio Recording
+		recorder = new SoundRecordingUtil();
+		wavFile = new File("output_"+System.currentTimeMillis()+".wav");
+
+		Thread recordThread = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					System.out.println("Start recording...");
+					recorder.start();
+				} catch (LineUnavailableException ex) {
+					ex.printStackTrace();
+					System.exit(-1);
+				}
+			}
+		});
+
+		recordThread.start();
+	}
+
+	private void audioRecordingStop() {
+		try {
+			recorder.stop();
+			recorder.save(wavFile);
+			System.out.println("Stopping recording");
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+	}
+
 	public WebCamService getService() {
 		return service ;
 	}
